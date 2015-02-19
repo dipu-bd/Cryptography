@@ -1,0 +1,9 @@
+E:\Projects\GitHub\Cryptography\Cryptography\Cryptography\obj\Debug\Cryptography.csprojResolveAssemblyReference.cache
+E:\Projects\GitHub\Cryptography\Cryptography\Cryptography\obj\Debug\Cryptography.Form1.resources
+E:\Projects\GitHub\Cryptography\Cryptography\Cryptography\obj\Debug\Cryptography.Properties.Resources.resources
+E:\Projects\GitHub\Cryptography\Cryptography\Cryptography\obj\Debug\Cryptography.csproj.GenerateResource.Cache
+E:\Projects\GitHub\Cryptography\Cryptography\Cryptography\bin\Debug\Cryptography.exe
+E:\Projects\GitHub\Cryptography\Cryptography\Cryptography\bin\Debug\Cryptography.pdb
+E:\Projects\GitHub\Cryptography\Cryptography\Cryptography\obj\Debug\Cryptography.exe
+E:\Projects\GitHub\Cryptography\Cryptography\Cryptography\obj\Debug\Cryptography.pdb
+E:\Projects\GitHub\Cryptography\Cryptography\Cryptography\bin\Debug\Cryptography.exe.config
