@@ -130,18 +130,6 @@ Imuf! kag yustf yuee eayqftuzs uybadfmzf. = 14
 
 xda vnncrwp rb jc 5:35yv = 17</value>
   </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>How it works
--------------------
-N = P x Q (P, Q both primes)
-φ(n) = (P - 1)(Q - 1)
-Find such E and D so that
-   gcd(E, φ(n)) = 1 and
-   (D x E) mod φ(n) = 1.
-if M = message and C = cipher,
-   C = M^E mod N
-   M = C^D mod N</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

@@ -14,6 +14,7 @@ namespace Cryptography
         {
             InitializeComponent();
             initPolybiusList(5);
+            showRSAKeys();
         }
 
         #region Caesar Cipher
@@ -74,7 +75,7 @@ namespace Cryptography
         #endregion
 
         #region Polyalphabetic Cipher
-        
+
         private void encryptPolyalpha()
         {
             cipherPolyalpha.Clear();
@@ -434,179 +435,109 @@ namespace Cryptography
         #endregion
 
         #region RSA Encryption
-                
-        private class RSAInput
+
+        private RSAInput rsaInput = new RSAInput();
+
+        void showRSAKeys()
         {
-            //variables
-                        
-            //get and set
-            public void setN(string text)
-            {
-
-            }
-            public string getN()
-            {
-
-            }
-            public void setP(string text)
-            {
-
-            }
-            public string getP()
-            {
-
-            }
-            public void setQ(string text)
-            {
-
-            }
-            public string getQ()
-            {
-
-            }
-            public void setE(string text)
-            {
-
-            }
-            public string getE()
-            {
-
-            }
-            public void setD(string text)
-            {
-
-            }
-            public string getD()
-            {
-
-            }
-
-            //small func
-            public void clear()
-            {
-
-            }
-            public void checkValidity()
-            {
-
-            }
-
-            //heavy work
-            
-            public void makeN()
-            {
-
-            }
-            public void makeD()
-            {
-
-            }
-            public void randPQ()
-            {
-
-            }
-            public void randE()
-            {
-
-            }
-
-            //main work
-            public string encrypt(char ch)
-            {
-
-            }
-            public char decrypt(string ch)
-            {
-
-            }
-        }
-        
-        private RSAInput rsaInput;
-
-        private void encryptRSA()
-        {
-            string data = inputRSA.Text;
-            string res = "";
-            foreach(char ch in data)
-            {
-
-            }
-            outputRSA.Text = res;
+            modulusRSA.Text = rsaInput.getN();
+            firstPrimeRSA.Text = rsaInput.getP();
+            secondPrimeRSA.Text = rsaInput.getQ();
+            publicKeyRSA.Text = rsaInput.getE();
+            privateKeyRSA.Text = rsaInput.getD();
         }
 
-        private void decryptRSA()
+        public void processRsaInputs()
         {
-            string data = inputRSA.Text;
-            string res = "";
-            foreach(char ch in data)
+            if (factorCheckRSA.Checked)
             {
-
+                rsaInput.setP(firstPrimeRSA.Text);
+                rsaInput.setQ(secondPrimeRSA.Text);
+                rsaInput.setE(publicKeyRSA.Text);
+                rsaInput.makeN();
+                rsaInput.makeD();
+                rsaInput.checkValidity();
             }
-            outputRSA.Text = res;
+            else
+            {
+                rsaInput.setN(modulusRSA.Text);
+                rsaInput.setE(publicKeyRSA.Text);
+                rsaInput.setD(privateKeyRSA.Text);
+            }
+          
+            showRSAKeys();
         }
 
-        public bool processInputs()
+        //
+        // GUI Interactivity
+        // 
+        private void convertButtonRSA_Click(object sender, EventArgs e)
         {
             try
             {
-                rsaInput.clear();
-
-                if (factorCheckRSA.Checked)
+                if (encryptRadioRSA.Checked)
                 {
-                    rsaInput.setP(firstPrimeRSA.Text);
-                    rsaInput.setQ(secondPrimeRSA.Text);
-                    rsaInput.setE(publicKeyRSA.Text);
-                    rsaInput.makeN();
-                    rsaInput.makeD();
+                    processRsaInputs();
+                    cipherRSA.Text = rsaInput.encrypt(plainRSA.Text);
+
+                    cipherRSA.Text += Environment.NewLine;
+                    cipherRSA.Text += Environment.NewLine;
+                    cipherRSA.Text += Environment.NewLine;
+                    cipherRSA.Text += "-----------------------------------------------";
+                    cipherRSA.Text += Environment.NewLine;
+                    cipherRSA.Text += "----------------- ENCRYPTION DATA -------------";
+                    cipherRSA.Text += Environment.NewLine;
+                    cipherRSA.Text += "N=" + rsaInput.getN() + Environment.NewLine;
+                    cipherRSA.Text += "E=" + rsaInput.getE() + Environment.NewLine;
+                    cipherRSA.Text += "D=" + rsaInput.getD() + Environment.NewLine;
+
                 }
                 else
                 {
-                    rsaInput.setN(modulusRSA.Text);
-                    rsaInput.setE(publicKeyRSA.Text);
-                    rsaInput.setD(privateKeyRSA.Text);
+                    string text = cipherRSA.Text;
+                    int last = text.IndexOf('\n');
+                    int nstart = text.IndexOf("N=", last);
+                    int estart = text.IndexOf("E=", nstart);
+                    int dstart = text.IndexOf("D=", estart);
+
+                    try
+                    {
+                        string N = text.Substring(nstart + 2, estart - nstart - 3).Trim();
+                        string E = text.Substring(estart + 2, dstart - estart - 3).Trim();
+                        string D = text.Substring(dstart + 2).Trim();
+                        factorCheckRSA.Checked = false;
+                        modulusRSA.Text = N;
+                        publicKeyRSA.Text = E;
+                        privateKeyRSA.Text = D;
+                    }
+                    catch { }
+
+                    processRsaInputs();
+                    plainRSA.Text = rsaInput.decrypt(text.Substring(0, text.IndexOf('\n')));
                 }
-
-                rsaInput.checkValidity();
-
-                modulusRSA.Text = rsaInput.getN();
-                firstPrimeRSA.Text = rsaInput.getP();
-                secondPrimeRSA.Text = rsaInput.getQ();
-                publicKeyRSA.Text = rsaInput.getE();
-                privateKeyRSA.Text = rsaInput.getD();
-
-                return true;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                return false;
-            }
-        }
-                
-        //
-        // GUI Interactivity
-        //
-        private void encryptRSA_Click(object sender, EventArgs e)
-        {
-            if(processInputs())
-            {
-                encryptRSA();
-            }
-        }
-
-        private void decryptRSA_Click(object sender, EventArgs e)
-        {
-            if(processInputs())
-            {
-                decryptRSA();
             }
         }
 
         private void toggleRSA_Click(object sender, EventArgs e)
         {
-            string text = inputRSA.Text;
-            inputRSA.Text = outputRSA.Text;
-            outputRSA.Text = text;
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "All Files|*.*";
+            if (ofd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                string text = System.IO.File.ReadAllText(ofd.FileName);
+                if (encryptRadioRSA.Checked)
+                {
+                    plainRSA.Text = text;
+                }
+                else
+                {
+                    cipherRSA.Text = text;
+                }
+            }
         }
 
         private void factorCheckRSA_CheckedChanged(object sender, EventArgs e)
@@ -617,7 +548,7 @@ namespace Cryptography
 
             modulusRSA.Text = "";
             firstPrimeRSA.Text = "";
-            secondPrimeRSA.Text = "";            
+            secondPrimeRSA.Text = "";
             privateKeyRSA.Text = "";
         }
 
@@ -628,7 +559,7 @@ namespace Cryptography
             secondPrimeRSA.Text = rsaInput.getQ();
             modulusRSA.Text = rsaInput.getN();
         }
-         
+
         private void randKeyRSA_Click(object sender, EventArgs e)
         {
             rsaInput.randE();
@@ -638,8 +569,28 @@ namespace Cryptography
 
         #endregion
 
+        private void encryptRadioRSA_CheckedChanged(object sender, EventArgs e)
+        {
+            if (encryptRadioRSA.Checked)
+            {
+                plainRSA.ReadOnly = false;
+                cipherRSA.ReadOnly = true;
+                convertButtonRSA.Text = "Encrypt";
+            }
+        }
+
+        private void decryptRadioRSA_CheckedChanged(object sender, EventArgs e)
+        {
+            if (decryptRadioRSA.Checked)
+            {
+                plainRSA.ReadOnly = true;
+                cipherRSA.ReadOnly = false;
+                convertButtonRSA.Text = "Decrypt";
+            }
+        }
+
         #region Mysterious Encryption
-                        
+
         #endregion
 
     }

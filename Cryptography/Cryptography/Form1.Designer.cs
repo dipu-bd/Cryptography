@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "1",
             "a",
             "b",
@@ -37,7 +37,7 @@
             "d",
             "e",
             ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
             "2",
             "f",
             "g",
@@ -45,10 +45,10 @@
             "i",
             "k",
             ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem("3");
-            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem("4");
-            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem("5");
-            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem("6");
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("3");
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("4");
+            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("5");
+            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem("6");
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.plainCaesar = new System.Windows.Forms.TextBox();
@@ -85,13 +85,7 @@
             this.polybiusEncryptRadio = new System.Windows.Forms.RadioButton();
             this.transposeButton = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.inputRSA = new System.Windows.Forms.TextBox();
-            this.outputRSA = new System.Windows.Forms.TextBox();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.decryptButtonRSA = new System.Windows.Forms.Button();
-            this.encryptButtonRSA = new System.Windows.Forms.Button();
-            this.toggleRSA = new System.Windows.Forms.Button();
+            this.splitContainer4 = new System.Windows.Forms.SplitContainer();
             this.leftPanelRSA = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.modulusRSA = new System.Windows.Forms.TextBox();
@@ -102,7 +96,6 @@
             this.secondPrimeRSA = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.firstPrimeRSA = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.randKeyRSA = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -111,7 +104,16 @@
             this.label8 = new System.Windows.Forms.Label();
             this.privateKeyRSA = new System.Windows.Forms.TextBox();
             this.factorCheckRSA = new System.Windows.Forms.CheckBox();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.plainRSA = new System.Windows.Forms.TextBox();
+            this.cipherRSA = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.decryptRadioRSA = new System.Windows.Forms.RadioButton();
+            this.encryptRadioRSA = new System.Windows.Forms.RadioButton();
+            this.convertButtonRSA = new System.Windows.Forms.Button();
+            this.toggleRSA = new System.Windows.Forms.Button();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.label4 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -119,26 +121,33 @@
             ((System.ComponentModel.ISupportInitialize)(this.caesarDistance)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.caesarNumeric)).BeginInit();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel1.SuspendLayout();
             this.splitContainer3.Panel2.SuspendLayout();
             this.splitContainer3.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.listContainer.SuspendLayout();
             this.tabPage4.SuspendLayout();
-            this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.Panel2.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
-            this.tableLayoutPanel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
+            this.splitContainer4.Panel1.SuspendLayout();
+            this.splitContainer4.Panel2.SuspendLayout();
+            this.splitContainer4.SuspendLayout();
             this.leftPanelRSA.SuspendLayout();
             this.panel1.SuspendLayout();
             this.primePanelRSA.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -153,7 +162,7 @@
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.Padding = new System.Drawing.Point(25, 6);
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(784, 411);
+            this.tabControl1.Size = new System.Drawing.Size(784, 441);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -163,7 +172,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 30);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(776, 377);
+            this.tabPage1.Size = new System.Drawing.Size(776, 407);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Caesar Cipher";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -176,7 +185,7 @@
             this.plainCaesar.Multiline = true;
             this.plainCaesar.Name = "plainCaesar";
             this.plainCaesar.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.plainCaesar.Size = new System.Drawing.Size(709, 371);
+            this.plainCaesar.Size = new System.Drawing.Size(709, 401);
             this.plainCaesar.TabIndex = 0;
             this.plainCaesar.Text = resources.GetString("plainCaesar.Text");
             // 
@@ -197,13 +206,13 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(61, 371);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(61, 401);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // caesarNumeric2
             // 
             this.caesarNumeric2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.caesarNumeric2.Location = new System.Drawing.Point(4, 345);
+            this.caesarNumeric2.Location = new System.Drawing.Point(4, 375);
             this.caesarNumeric2.Maximum = new decimal(new int[] {
             25,
             0,
@@ -223,7 +232,7 @@
             this.caesarDistance.Minimum = 1;
             this.caesarDistance.Name = "caesarDistance";
             this.caesarDistance.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.caesarDistance.Size = new System.Drawing.Size(45, 305);
+            this.caesarDistance.Size = new System.Drawing.Size(45, 335);
             this.caesarDistance.TabIndex = 2;
             this.caesarDistance.Value = 26;
             this.caesarDistance.Scroll += new System.EventHandler(this.caesarDistance_Scroll);
@@ -251,7 +260,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 30);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(776, 377);
+            this.tabPage2.Size = new System.Drawing.Size(776, 407);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Polyalphabetic Cipher";
             // 
@@ -270,8 +279,8 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.cipherPolyalpha);
-            this.splitContainer2.Size = new System.Drawing.Size(770, 339);
-            this.splitContainer2.SplitterDistance = 174;
+            this.splitContainer2.Size = new System.Drawing.Size(770, 369);
+            this.splitContainer2.SplitterDistance = 189;
             this.splitContainer2.TabIndex = 3;
             // 
             // plainPolyaplha
@@ -282,7 +291,7 @@
             this.plainPolyaplha.Multiline = true;
             this.plainPolyaplha.Name = "plainPolyaplha";
             this.plainPolyaplha.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.plainPolyaplha.Size = new System.Drawing.Size(770, 174);
+            this.plainPolyaplha.Size = new System.Drawing.Size(770, 189);
             this.plainPolyaplha.TabIndex = 0;
             this.plainPolyaplha.Text = "specify a keyword to create a polyalphabetic cipher from this text.";
             this.plainPolyaplha.TextChanged += new System.EventHandler(this.plainPoly_TextChanged);
@@ -296,7 +305,7 @@
             this.cipherPolyalpha.Name = "cipherPolyalpha";
             this.cipherPolyalpha.ReadOnly = true;
             this.cipherPolyalpha.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.cipherPolyalpha.Size = new System.Drawing.Size(770, 161);
+            this.cipherPolyalpha.Size = new System.Drawing.Size(770, 176);
             this.cipherPolyalpha.TabIndex = 1;
             this.cipherPolyalpha.TextChanged += new System.EventHandler(this.cipherPoly_TextChanged);
             // 
@@ -308,7 +317,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.26617F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 83.73383F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 104F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 141F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 155F));
             this.tableLayoutPanel2.Controls.Add(this.polyalphaDecryptRadio, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.polyalphaKeyword, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
@@ -324,9 +333,9 @@
             // polyalphaDecryptRadio
             // 
             this.polyalphaDecryptRadio.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.polyalphaDecryptRadio.Location = new System.Drawing.Point(630, 4);
+            this.polyalphaDecryptRadio.Location = new System.Drawing.Point(616, 4);
             this.polyalphaDecryptRadio.Name = "polyalphaDecryptRadio";
-            this.polyalphaDecryptRadio.Size = new System.Drawing.Size(136, 24);
+            this.polyalphaDecryptRadio.Size = new System.Drawing.Size(150, 24);
             this.polyalphaDecryptRadio.TabIndex = 4;
             this.polyalphaDecryptRadio.TabStop = true;
             this.polyalphaDecryptRadio.Text = "Decrypt";
@@ -337,10 +346,10 @@
             // 
             this.polyalphaKeyword.Dock = System.Windows.Forms.DockStyle.Fill;
             this.polyalphaKeyword.Font = new System.Drawing.Font("Consolas", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.polyalphaKeyword.Location = new System.Drawing.Point(89, 4);
+            this.polyalphaKeyword.Location = new System.Drawing.Point(87, 4);
             this.polyalphaKeyword.Name = "polyalphaKeyword";
             this.polyalphaKeyword.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.polyalphaKeyword.Size = new System.Drawing.Size(429, 25);
+            this.polyalphaKeyword.Size = new System.Drawing.Size(417, 25);
             this.polyalphaKeyword.TabIndex = 1;
             this.polyalphaKeyword.TextChanged += new System.EventHandler(this.polyKeyword_TextChanged);
             // 
@@ -348,7 +357,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 8);
+            this.label1.Location = new System.Drawing.Point(21, 8);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 15);
             this.label1.TabIndex = 2;
@@ -358,7 +367,7 @@
             // 
             this.polyalphaEncryptRadio.Checked = true;
             this.polyalphaEncryptRadio.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.polyalphaEncryptRadio.Location = new System.Drawing.Point(525, 4);
+            this.polyalphaEncryptRadio.Location = new System.Drawing.Point(511, 4);
             this.polyalphaEncryptRadio.Name = "polyalphaEncryptRadio";
             this.polyalphaEncryptRadio.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.polyalphaEncryptRadio.Size = new System.Drawing.Size(98, 24);
@@ -375,7 +384,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 30);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(776, 377);
+            this.tabPage3.Size = new System.Drawing.Size(776, 407);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Polybius Squared Cipher";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -384,7 +393,7 @@
             // 
             this.splitContainer3.BackColor = System.Drawing.SystemColors.Control;
             this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer3.Location = new System.Drawing.Point(183, 3);
+            this.splitContainer3.Location = new System.Drawing.Point(192, 3);
             this.splitContainer3.Name = "splitContainer3";
             this.splitContainer3.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -395,8 +404,8 @@
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.cipherPolybius);
-            this.splitContainer3.Size = new System.Drawing.Size(590, 371);
-            this.splitContainer3.SplitterDistance = 183;
+            this.splitContainer3.Size = new System.Drawing.Size(581, 401);
+            this.splitContainer3.SplitterDistance = 197;
             this.splitContainer3.TabIndex = 4;
             // 
             // plainPolybius
@@ -407,7 +416,7 @@
             this.plainPolybius.Multiline = true;
             this.plainPolybius.Name = "plainPolybius";
             this.plainPolybius.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.plainPolybius.Size = new System.Drawing.Size(590, 183);
+            this.plainPolybius.Size = new System.Drawing.Size(581, 197);
             this.plainPolybius.TabIndex = 0;
             this.plainPolybius.Text = "numbers that are not valid will be ignored or a ? mark will appear in the text if" +
     " decipher failed.";
@@ -422,7 +431,7 @@
             this.cipherPolybius.Name = "cipherPolybius";
             this.cipherPolybius.ReadOnly = true;
             this.cipherPolybius.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.cipherPolybius.Size = new System.Drawing.Size(590, 184);
+            this.cipherPolybius.Size = new System.Drawing.Size(581, 200);
             this.cipherPolybius.TabIndex = 1;
             this.cipherPolybius.TextChanged += new System.EventHandler(this.cipherPolybius_TextChanged);
             // 
@@ -440,21 +449,22 @@
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 6;
+            this.tableLayoutPanel3.RowCount = 7;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(180, 371);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(189, 401);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // sixPolyCheck
             // 
             this.sixPolyCheck.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.sixPolyCheck.AutoSize = true;
-            this.sixPolyCheck.Location = new System.Drawing.Point(46, 99);
+            this.sixPolyCheck.Location = new System.Drawing.Point(50, 99);
             this.sixPolyCheck.Name = "sixPolyCheck";
             this.sixPolyCheck.Size = new System.Drawing.Size(88, 19);
             this.sixPolyCheck.TabIndex = 4;
@@ -468,7 +478,7 @@
             this.fivePolyCheck.AutoSize = true;
             this.fivePolyCheck.Checked = true;
             this.fivePolyCheck.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.fivePolyCheck.Location = new System.Drawing.Point(46, 68);
+            this.fivePolyCheck.Location = new System.Drawing.Point(50, 68);
             this.fivePolyCheck.Name = "fivePolyCheck";
             this.fivePolyCheck.Size = new System.Drawing.Size(88, 19);
             this.fivePolyCheck.TabIndex = 1;
@@ -478,11 +488,11 @@
             // 
             // listContainer
             // 
+            this.listContainer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.listContainer.Controls.Add(this.polybiusSquare);
-            this.listContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listContainer.Location = new System.Drawing.Point(4, 128);
             this.listContainer.Name = "listContainer";
-            this.listContainer.Size = new System.Drawing.Size(172, 204);
+            this.listContainer.Size = new System.Drawing.Size(181, 150);
             this.listContainer.TabIndex = 1;
             // 
             // polybiusSquare
@@ -499,24 +509,24 @@
             this.polybiusSquare.FullRowSelect = true;
             this.polybiusSquare.GridLines = true;
             this.polybiusSquare.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            listViewItem7.UseItemStyleForSubItems = false;
-            listViewItem8.UseItemStyleForSubItems = false;
-            listViewItem9.UseItemStyleForSubItems = false;
-            listViewItem10.UseItemStyleForSubItems = false;
-            listViewItem11.UseItemStyleForSubItems = false;
-            listViewItem12.UseItemStyleForSubItems = false;
+            listViewItem1.UseItemStyleForSubItems = false;
+            listViewItem2.UseItemStyleForSubItems = false;
+            listViewItem3.UseItemStyleForSubItems = false;
+            listViewItem4.UseItemStyleForSubItems = false;
+            listViewItem5.UseItemStyleForSubItems = false;
+            listViewItem6.UseItemStyleForSubItems = false;
             this.polybiusSquare.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem7,
-            listViewItem8,
-            listViewItem9,
-            listViewItem10,
-            listViewItem11,
-            listViewItem12});
+            listViewItem1,
+            listViewItem2,
+            listViewItem3,
+            listViewItem4,
+            listViewItem5,
+            listViewItem6});
             this.polybiusSquare.Location = new System.Drawing.Point(0, 0);
             this.polybiusSquare.MultiSelect = false;
             this.polybiusSquare.Name = "polybiusSquare";
             this.polybiusSquare.Scrollable = false;
-            this.polybiusSquare.Size = new System.Drawing.Size(172, 204);
+            this.polybiusSquare.Size = new System.Drawing.Size(181, 150);
             this.polybiusSquare.TabIndex = 4;
             this.polybiusSquare.UseCompatibleStateImageBehavior = false;
             this.polybiusSquare.View = System.Windows.Forms.View.Details;
@@ -531,7 +541,7 @@
             // 
             this.columnHeader2.Text = "1";
             this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader2.Width = 25;
+            this.columnHeader2.Width = 24;
             // 
             // columnHeader3
             // 
@@ -570,7 +580,7 @@
             this.polybiusDecryptRadio.Location = new System.Drawing.Point(11, 35);
             this.polybiusDecryptRadio.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.polybiusDecryptRadio.Name = "polybiusDecryptRadio";
-            this.polybiusDecryptRadio.Size = new System.Drawing.Size(165, 24);
+            this.polybiusDecryptRadio.Size = new System.Drawing.Size(174, 24);
             this.polybiusDecryptRadio.TabIndex = 3;
             this.polybiusDecryptRadio.Text = "Decrypt";
             this.polybiusDecryptRadio.UseVisualStyleBackColor = true;
@@ -584,7 +594,7 @@
             this.polybiusEncryptRadio.Location = new System.Drawing.Point(11, 4);
             this.polybiusEncryptRadio.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.polybiusEncryptRadio.Name = "polybiusEncryptRadio";
-            this.polybiusEncryptRadio.Size = new System.Drawing.Size(165, 24);
+            this.polybiusEncryptRadio.Size = new System.Drawing.Size(174, 24);
             this.polybiusEncryptRadio.TabIndex = 2;
             this.polybiusEncryptRadio.TabStop = true;
             this.polybiusEncryptRadio.Text = "Encrypt";
@@ -594,9 +604,9 @@
             // transposeButton
             // 
             this.transposeButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.transposeButton.Location = new System.Drawing.Point(4, 339);
+            this.transposeButton.Location = new System.Drawing.Point(4, 285);
             this.transposeButton.Name = "transposeButton";
-            this.transposeButton.Size = new System.Drawing.Size(172, 28);
+            this.transposeButton.Size = new System.Drawing.Size(181, 30);
             this.transposeButton.TabIndex = 5;
             this.transposeButton.Text = "Transpose";
             this.transposeButton.UseVisualStyleBackColor = true;
@@ -604,128 +614,48 @@
             // 
             // tabPage4
             // 
-            this.tabPage4.Controls.Add(this.splitContainer1);
-            this.tabPage4.Controls.Add(this.tableLayoutPanel5);
-            this.tabPage4.Controls.Add(this.leftPanelRSA);
+            this.tabPage4.Controls.Add(this.splitContainer4);
             this.tabPage4.Location = new System.Drawing.Point(4, 30);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(776, 377);
+            this.tabPage4.Size = new System.Drawing.Size(776, 407);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "RSA Encryption";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // splitContainer1
+            // splitContainer4
             // 
-            this.splitContainer1.BackColor = System.Drawing.SystemColors.Control;
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(223, 3);
-            this.splitContainer1.Name = "splitContainer1";
-            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.splitContainer4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer4.Location = new System.Drawing.Point(3, 3);
+            this.splitContainer4.Name = "splitContainer4";
             // 
-            // splitContainer1.Panel1
+            // splitContainer4.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.inputRSA);
+            this.splitContainer4.Panel1.AutoScroll = true;
+            this.splitContainer4.Panel1.Controls.Add(this.label4);
+            this.splitContainer4.Panel1.Controls.Add(this.leftPanelRSA);
             // 
-            // splitContainer1.Panel2
+            // splitContainer4.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.outputRSA);
-            this.splitContainer1.Size = new System.Drawing.Size(550, 339);
-            this.splitContainer1.SplitterDistance = 161;
-            this.splitContainer1.TabIndex = 5;
-            // 
-            // inputRSA
-            // 
-            this.inputRSA.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.inputRSA.Font = new System.Drawing.Font("Consolas", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inputRSA.Location = new System.Drawing.Point(0, 0);
-            this.inputRSA.Multiline = true;
-            this.inputRSA.Name = "inputRSA";
-            this.inputRSA.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.inputRSA.Size = new System.Drawing.Size(550, 161);
-            this.inputRSA.TabIndex = 0;
-            this.inputRSA.Text = "set plain text here and press encrypt to encrypt.\r\nset encrypted text here and pr" +
-    "ess decrypt to decrypt.\r\nToggle text will toggle input output text data.";
-            // 
-            // outputRSA
-            // 
-            this.outputRSA.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.outputRSA.Font = new System.Drawing.Font("Consolas", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.outputRSA.Location = new System.Drawing.Point(0, 0);
-            this.outputRSA.Multiline = true;
-            this.outputRSA.Name = "outputRSA";
-            this.outputRSA.ReadOnly = true;
-            this.outputRSA.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.outputRSA.Size = new System.Drawing.Size(550, 174);
-            this.outputRSA.TabIndex = 1;
-            this.outputRSA.Text = "set the public key and private key or \r\nset two large primes in the input box and" +
-    " press generate key.\r\nnow you are done with the keys needed to encrypt.";
-            // 
-            // tableLayoutPanel5
-            // 
-            this.tableLayoutPanel5.ColumnCount = 4;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel5.Controls.Add(this.decryptButtonRSA, 3, 0);
-            this.tableLayoutPanel5.Controls.Add(this.encryptButtonRSA, 2, 0);
-            this.tableLayoutPanel5.Controls.Add(this.toggleRSA, 0, 0);
-            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(223, 342);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 1;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(550, 32);
-            this.tableLayoutPanel5.TabIndex = 6;
-            // 
-            // decryptButtonRSA
-            // 
-            this.decryptButtonRSA.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.decryptButtonRSA.Location = new System.Drawing.Point(433, 3);
-            this.decryptButtonRSA.Name = "decryptButtonRSA";
-            this.decryptButtonRSA.Size = new System.Drawing.Size(114, 26);
-            this.decryptButtonRSA.TabIndex = 9;
-            this.decryptButtonRSA.Text = "Decrypt";
-            this.decryptButtonRSA.UseVisualStyleBackColor = true;
-            this.decryptButtonRSA.Click += new System.EventHandler(this.decryptRSA_Click);
-            // 
-            // encryptButtonRSA
-            // 
-            this.encryptButtonRSA.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.encryptButtonRSA.Location = new System.Drawing.Point(313, 3);
-            this.encryptButtonRSA.Name = "encryptButtonRSA";
-            this.encryptButtonRSA.Size = new System.Drawing.Size(114, 26);
-            this.encryptButtonRSA.TabIndex = 8;
-            this.encryptButtonRSA.Text = "Encrypt";
-            this.encryptButtonRSA.UseVisualStyleBackColor = true;
-            this.encryptButtonRSA.Click += new System.EventHandler(this.encryptRSA_Click);
-            // 
-            // toggleRSA
-            // 
-            this.toggleRSA.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.toggleRSA.Location = new System.Drawing.Point(3, 3);
-            this.toggleRSA.Name = "toggleRSA";
-            this.toggleRSA.Size = new System.Drawing.Size(114, 26);
-            this.toggleRSA.TabIndex = 7;
-            this.toggleRSA.Text = "Toggle Text";
-            this.toggleRSA.UseVisualStyleBackColor = true;
-            this.toggleRSA.Click += new System.EventHandler(this.toggleRSA_Click);
+            this.splitContainer4.Panel2.Controls.Add(this.splitContainer1);
+            this.splitContainer4.Panel2.Controls.Add(this.tableLayoutPanel5);
+            this.splitContainer4.Size = new System.Drawing.Size(770, 401);
+            this.splitContainer4.SplitterDistance = 236;
+            this.splitContainer4.TabIndex = 9;
             // 
             // leftPanelRSA
             // 
+            this.leftPanelRSA.AutoSize = true;
             this.leftPanelRSA.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.leftPanelRSA.ColumnCount = 1;
             this.leftPanelRSA.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.leftPanelRSA.Controls.Add(this.panel1, 0, 1);
             this.leftPanelRSA.Controls.Add(this.primePanelRSA, 0, 2);
-            this.leftPanelRSA.Controls.Add(this.label7, 0, 5);
             this.leftPanelRSA.Controls.Add(this.panel3, 0, 3);
             this.leftPanelRSA.Controls.Add(this.panel4, 0, 4);
             this.leftPanelRSA.Controls.Add(this.factorCheckRSA, 0, 0);
-            this.leftPanelRSA.Dock = System.Windows.Forms.DockStyle.Left;
-            this.leftPanelRSA.Location = new System.Drawing.Point(3, 3);
+            this.leftPanelRSA.Dock = System.Windows.Forms.DockStyle.Top;
+            this.leftPanelRSA.Location = new System.Drawing.Point(0, 0);
             this.leftPanelRSA.Name = "leftPanelRSA";
             this.leftPanelRSA.RowCount = 6;
             this.leftPanelRSA.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
@@ -734,7 +664,7 @@
             this.leftPanelRSA.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.leftPanelRSA.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.leftPanelRSA.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.leftPanelRSA.Size = new System.Drawing.Size(220, 371);
+            this.leftPanelRSA.Size = new System.Drawing.Size(236, 401);
             this.leftPanelRSA.TabIndex = 8;
             // 
             // panel1
@@ -745,19 +675,21 @@
             this.panel1.Location = new System.Drawing.Point(1, 28);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(218, 97);
+            this.panel1.Size = new System.Drawing.Size(234, 120);
             this.panel1.TabIndex = 11;
             // 
             // modulusRSA
             // 
-            this.modulusRSA.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.modulusRSA.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.modulusRSA.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.modulusRSA.Location = new System.Drawing.Point(6, 23);
             this.modulusRSA.Multiline = true;
             this.modulusRSA.Name = "modulusRSA";
             this.modulusRSA.ReadOnly = true;
-            this.modulusRSA.Size = new System.Drawing.Size(206, 65);
+            this.modulusRSA.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.modulusRSA.Size = new System.Drawing.Size(222, 88);
             this.modulusRSA.TabIndex = 3;
             // 
             // label2
@@ -778,16 +710,17 @@
             this.primePanelRSA.Controls.Add(this.secondPrimeRSA);
             this.primePanelRSA.Controls.Add(this.label6);
             this.primePanelRSA.Controls.Add(this.firstPrimeRSA);
-            this.primePanelRSA.Location = new System.Drawing.Point(1, 126);
+            this.primePanelRSA.Location = new System.Drawing.Point(1, 149);
             this.primePanelRSA.Margin = new System.Windows.Forms.Padding(0);
             this.primePanelRSA.Name = "primePanelRSA";
-            this.primePanelRSA.Size = new System.Drawing.Size(218, 125);
+            this.primePanelRSA.Size = new System.Drawing.Size(234, 148);
             this.primePanelRSA.TabIndex = 0;
             // 
             // randPrimeRSA
             // 
+            this.randPrimeRSA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.randPrimeRSA.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.randPrimeRSA.Location = new System.Drawing.Point(143, 3);
+            this.randPrimeRSA.Location = new System.Drawing.Point(159, 3);
             this.randPrimeRSA.Name = "randPrimeRSA";
             this.randPrimeRSA.Size = new System.Drawing.Size(70, 20);
             this.randPrimeRSA.TabIndex = 9;
@@ -810,18 +743,18 @@
             this.secondPrimeRSA.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.secondPrimeRSA.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.secondPrimeRSA.Location = new System.Drawing.Point(6, 82);
+            this.secondPrimeRSA.Location = new System.Drawing.Point(6, 92);
             this.secondPrimeRSA.Multiline = true;
             this.secondPrimeRSA.Name = "secondPrimeRSA";
             this.secondPrimeRSA.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.secondPrimeRSA.Size = new System.Drawing.Size(206, 36);
+            this.secondPrimeRSA.Size = new System.Drawing.Size(222, 50);
             this.secondPrimeRSA.TabIndex = 7;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(9, 64);
+            this.label6.Location = new System.Drawing.Point(9, 74);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(107, 15);
             this.label6.TabIndex = 8;
@@ -836,22 +769,8 @@
             this.firstPrimeRSA.Multiline = true;
             this.firstPrimeRSA.Name = "firstPrimeRSA";
             this.firstPrimeRSA.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.firstPrimeRSA.Size = new System.Drawing.Size(206, 35);
+            this.firstPrimeRSA.Size = new System.Drawing.Size(222, 50);
             this.firstPrimeRSA.TabIndex = 1;
-            // 
-            // label7
-            // 
-            this.label7.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label7.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(4, 354);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(212, 16);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "PADDING SCHEME:\r\n[M:16bit] = [a:4bit][m:8bit][b:4bit]\r\na,b both random. \r\n1<= a <" +
-    "=7 and 0<= b <=15.\r\n";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // panel3
             // 
@@ -859,16 +778,17 @@
             this.panel3.Controls.Add(this.randKeyRSA);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.publicKeyRSA);
-            this.panel3.Location = new System.Drawing.Point(1, 252);
+            this.panel3.Location = new System.Drawing.Point(1, 298);
             this.panel3.Margin = new System.Windows.Forms.Padding(0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(218, 50);
+            this.panel3.Size = new System.Drawing.Size(234, 50);
             this.panel3.TabIndex = 1;
             // 
             // randKeyRSA
             // 
+            this.randKeyRSA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.randKeyRSA.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.randKeyRSA.Location = new System.Drawing.Point(143, 2);
+            this.randKeyRSA.Location = new System.Drawing.Point(159, 2);
             this.randKeyRSA.Name = "randKeyRSA";
             this.randKeyRSA.Size = new System.Drawing.Size(70, 20);
             this.randKeyRSA.TabIndex = 11;
@@ -894,7 +814,7 @@
             this.publicKeyRSA.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.publicKeyRSA.Location = new System.Drawing.Point(6, 22);
             this.publicKeyRSA.Name = "publicKeyRSA";
-            this.publicKeyRSA.Size = new System.Drawing.Size(207, 22);
+            this.publicKeyRSA.Size = new System.Drawing.Size(223, 22);
             this.publicKeyRSA.TabIndex = 3;
             // 
             // panel4
@@ -902,10 +822,10 @@
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.privateKeyRSA);
-            this.panel4.Location = new System.Drawing.Point(1, 303);
+            this.panel4.Location = new System.Drawing.Point(1, 349);
             this.panel4.Margin = new System.Windows.Forms.Padding(0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(218, 50);
+            this.panel4.Size = new System.Drawing.Size(234, 50);
             this.panel4.TabIndex = 2;
             // 
             // label8
@@ -927,7 +847,7 @@
             this.privateKeyRSA.Location = new System.Drawing.Point(6, 22);
             this.privateKeyRSA.Name = "privateKeyRSA";
             this.privateKeyRSA.ReadOnly = true;
-            this.privateKeyRSA.Size = new System.Drawing.Size(206, 22);
+            this.privateKeyRSA.Size = new System.Drawing.Size(222, 22);
             this.privateKeyRSA.TabIndex = 3;
             // 
             // factorCheckRSA
@@ -937,7 +857,7 @@
             this.factorCheckRSA.Checked = true;
             this.factorCheckRSA.CheckState = System.Windows.Forms.CheckState.Checked;
             this.factorCheckRSA.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.factorCheckRSA.Location = new System.Drawing.Point(39, 4);
+            this.factorCheckRSA.Location = new System.Drawing.Point(47, 4);
             this.factorCheckRSA.Name = "factorCheckRSA";
             this.factorCheckRSA.Size = new System.Drawing.Size(142, 20);
             this.factorCheckRSA.TabIndex = 10;
@@ -945,21 +865,146 @@
             this.factorCheckRSA.UseVisualStyleBackColor = true;
             this.factorCheckRSA.CheckedChanged += new System.EventHandler(this.factorCheckRSA_CheckedChanged);
             // 
+            // splitContainer1
+            // 
+            this.splitContainer1.BackColor = System.Drawing.SystemColors.Control;
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.plainRSA);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.cipherRSA);
+            this.splitContainer1.Size = new System.Drawing.Size(530, 369);
+            this.splitContainer1.SplitterDistance = 175;
+            this.splitContainer1.TabIndex = 5;
+            // 
+            // plainRSA
+            // 
+            this.plainRSA.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.plainRSA.Font = new System.Drawing.Font("Consolas", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.plainRSA.Location = new System.Drawing.Point(0, 0);
+            this.plainRSA.Multiline = true;
+            this.plainRSA.Name = "plainRSA";
+            this.plainRSA.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.plainRSA.Size = new System.Drawing.Size(530, 175);
+            this.plainRSA.TabIndex = 0;
+            this.plainRSA.Text = "RSA is widely used for security nowadays.\r\nSelect and press Encrypt button to enc" +
+    "rypt.\r\n\r\nDon\'t forget to copy the values on the left.\r\nOtherwise you won\'t ever " +
+    "be able to decrypt your own message.\r\n";
+            // 
+            // cipherRSA
+            // 
+            this.cipherRSA.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cipherRSA.Font = new System.Drawing.Font("Consolas", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cipherRSA.Location = new System.Drawing.Point(0, 0);
+            this.cipherRSA.Multiline = true;
+            this.cipherRSA.Name = "cipherRSA";
+            this.cipherRSA.ReadOnly = true;
+            this.cipherRSA.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.cipherRSA.Size = new System.Drawing.Size(530, 190);
+            this.cipherRSA.TabIndex = 1;
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 5;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
+            this.tableLayoutPanel5.Controls.Add(this.decryptRadioRSA, 3, 0);
+            this.tableLayoutPanel5.Controls.Add(this.encryptRadioRSA, 2, 0);
+            this.tableLayoutPanel5.Controls.Add(this.convertButtonRSA, 4, 0);
+            this.tableLayoutPanel5.Controls.Add(this.toggleRSA, 0, 0);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 369);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(530, 32);
+            this.tableLayoutPanel5.TabIndex = 6;
+            // 
+            // decryptRadioRSA
+            // 
+            this.decryptRadioRSA.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.decryptRadioRSA.Location = new System.Drawing.Point(293, 3);
+            this.decryptRadioRSA.Name = "decryptRadioRSA";
+            this.decryptRadioRSA.Size = new System.Drawing.Size(114, 26);
+            this.decryptRadioRSA.TabIndex = 11;
+            this.decryptRadioRSA.TabStop = true;
+            this.decryptRadioRSA.Text = "Decrypt";
+            this.decryptRadioRSA.UseVisualStyleBackColor = true;
+            this.decryptRadioRSA.CheckedChanged += new System.EventHandler(this.decryptRadioRSA_CheckedChanged);
+            // 
+            // encryptRadioRSA
+            // 
+            this.encryptRadioRSA.Checked = true;
+            this.encryptRadioRSA.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.encryptRadioRSA.Location = new System.Drawing.Point(173, 3);
+            this.encryptRadioRSA.Name = "encryptRadioRSA";
+            this.encryptRadioRSA.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.encryptRadioRSA.Size = new System.Drawing.Size(114, 26);
+            this.encryptRadioRSA.TabIndex = 10;
+            this.encryptRadioRSA.TabStop = true;
+            this.encryptRadioRSA.Text = "Encrypt";
+            this.encryptRadioRSA.UseVisualStyleBackColor = true;
+            this.encryptRadioRSA.CheckedChanged += new System.EventHandler(this.encryptRadioRSA_CheckedChanged);
+            // 
+            // convertButtonRSA
+            // 
+            this.convertButtonRSA.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.convertButtonRSA.Location = new System.Drawing.Point(413, 3);
+            this.convertButtonRSA.Name = "convertButtonRSA";
+            this.convertButtonRSA.Size = new System.Drawing.Size(114, 26);
+            this.convertButtonRSA.TabIndex = 9;
+            this.convertButtonRSA.Text = "Encrypt";
+            this.convertButtonRSA.UseVisualStyleBackColor = true;
+            this.convertButtonRSA.Click += new System.EventHandler(this.convertButtonRSA_Click);
+            // 
+            // toggleRSA
+            // 
+            this.toggleRSA.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.toggleRSA.Location = new System.Drawing.Point(3, 3);
+            this.toggleRSA.Name = "toggleRSA";
+            this.toggleRSA.Size = new System.Drawing.Size(114, 26);
+            this.toggleRSA.TabIndex = 7;
+            this.toggleRSA.Text = "Open File";
+            this.toggleRSA.UseVisualStyleBackColor = true;
+            this.toggleRSA.Click += new System.EventHandler(this.toggleRSA_Click);
+            // 
             // tabPage5
             // 
             this.tabPage5.Location = new System.Drawing.Point(4, 30);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(776, 377);
+            this.tabPage5.Size = new System.Drawing.Size(776, 407);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Mysterious Encryption";
             this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label4.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(0, 401);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(236, 0);
+            this.label4.TabIndex = 9;
+            this.label4.Text = resources.GetString("label4.Text");
+            this.label4.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 411);
+            this.ClientSize = new System.Drawing.Size(784, 441);
             this.Controls.Add(this.tabControl1);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -979,6 +1024,7 @@
             this.splitContainer2.Panel1.PerformLayout();
             this.splitContainer2.Panel2.ResumeLayout(false);
             this.splitContainer2.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
@@ -987,17 +1033,17 @@
             this.splitContainer3.Panel1.PerformLayout();
             this.splitContainer3.Panel2.ResumeLayout(false);
             this.splitContainer3.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
             this.splitContainer3.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             this.listContainer.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel1.PerformLayout();
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            this.splitContainer1.Panel2.PerformLayout();
-            this.splitContainer1.ResumeLayout(false);
-            this.tableLayoutPanel5.ResumeLayout(false);
+            this.splitContainer4.Panel1.ResumeLayout(false);
+            this.splitContainer4.Panel1.PerformLayout();
+            this.splitContainer4.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).EndInit();
+            this.splitContainer4.ResumeLayout(false);
             this.leftPanelRSA.ResumeLayout(false);
             this.leftPanelRSA.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -1008,6 +1054,13 @@
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel1.PerformLayout();
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            this.splitContainer1.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
+            this.tableLayoutPanel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1043,7 +1096,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
-        private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.Panel listContainer;
         private System.Windows.Forms.CheckBox sixPolyCheck;
         private System.Windows.Forms.CheckBox fivePolyCheck;
@@ -1051,11 +1103,10 @@
         private System.Windows.Forms.NumericUpDown caesarNumeric;
         private System.Windows.Forms.NumericUpDown caesarNumeric2;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.TextBox inputRSA;
-        private System.Windows.Forms.TextBox outputRSA;
+        private System.Windows.Forms.TextBox plainRSA;
+        private System.Windows.Forms.TextBox cipherRSA;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        private System.Windows.Forms.Button decryptButtonRSA;
-        private System.Windows.Forms.Button encryptButtonRSA;
+        private System.Windows.Forms.Button convertButtonRSA;
         private System.Windows.Forms.Button toggleRSA;
         private System.Windows.Forms.TextBox publicKeyRSA;
         private System.Windows.Forms.Label label3;
@@ -1063,7 +1114,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox secondPrimeRSA;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TableLayoutPanel leftPanelRSA;
         private System.Windows.Forms.Panel primePanelRSA;
         private System.Windows.Forms.Panel panel3;
@@ -1077,6 +1127,11 @@
         private System.Windows.Forms.Button randPrimeRSA;
         private System.Windows.Forms.Button randKeyRSA;
         private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.SplitContainer splitContainer4;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.RadioButton encryptRadioRSA;
+        private System.Windows.Forms.RadioButton decryptRadioRSA;
+        private System.Windows.Forms.Label label4;
     }
 }
 
