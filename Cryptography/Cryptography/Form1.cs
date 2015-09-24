@@ -434,6 +434,207 @@ namespace Cryptography
         #endregion
 
         #region RSA Encryption
+                
+        private class RSAInput
+        {
+            //variables
+                        
+            //get and set
+            public void setN(string text)
+            {
+
+            }
+            public string getN()
+            {
+
+            }
+            public void setP(string text)
+            {
+
+            }
+            public string getP()
+            {
+
+            }
+            public void setQ(string text)
+            {
+
+            }
+            public string getQ()
+            {
+
+            }
+            public void setE(string text)
+            {
+
+            }
+            public string getE()
+            {
+
+            }
+            public void setD(string text)
+            {
+
+            }
+            public string getD()
+            {
+
+            }
+
+            //small func
+            public void clear()
+            {
+
+            }
+            public void checkValidity()
+            {
+
+            }
+
+            //heavy work
+            
+            public void makeN()
+            {
+
+            }
+            public void makeD()
+            {
+
+            }
+            public void randPQ()
+            {
+
+            }
+            public void randE()
+            {
+
+            }
+
+            //main work
+            public string encrypt(char ch)
+            {
+
+            }
+            public char decrypt(string ch)
+            {
+
+            }
+        }
+        
+        private RSAInput rsaInput;
+
+        private void encryptRSA()
+        {
+            string data = inputRSA.Text;
+            string res = "";
+            foreach(char ch in data)
+            {
+
+            }
+            outputRSA.Text = res;
+        }
+
+        private void decryptRSA()
+        {
+            string data = inputRSA.Text;
+            string res = "";
+            foreach(char ch in data)
+            {
+
+            }
+            outputRSA.Text = res;
+        }
+
+        public bool processInputs()
+        {
+            try
+            {
+                rsaInput.clear();
+
+                if (factorCheckRSA.Checked)
+                {
+                    rsaInput.setP(firstPrimeRSA.Text);
+                    rsaInput.setQ(secondPrimeRSA.Text);
+                    rsaInput.setE(publicKeyRSA.Text);
+                    rsaInput.makeN();
+                    rsaInput.makeD();
+                }
+                else
+                {
+                    rsaInput.setN(modulusRSA.Text);
+                    rsaInput.setE(publicKeyRSA.Text);
+                    rsaInput.setD(privateKeyRSA.Text);
+                }
+
+                rsaInput.checkValidity();
+
+                modulusRSA.Text = rsaInput.getN();
+                firstPrimeRSA.Text = rsaInput.getP();
+                secondPrimeRSA.Text = rsaInput.getQ();
+                publicKeyRSA.Text = rsaInput.getE();
+                privateKeyRSA.Text = rsaInput.getD();
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
+                
+        //
+        // GUI Interactivity
+        //
+        private void encryptRSA_Click(object sender, EventArgs e)
+        {
+            if(processInputs())
+            {
+                encryptRSA();
+            }
+        }
+
+        private void decryptRSA_Click(object sender, EventArgs e)
+        {
+            if(processInputs())
+            {
+                decryptRSA();
+            }
+        }
+
+        private void toggleRSA_Click(object sender, EventArgs e)
+        {
+            string text = inputRSA.Text;
+            inputRSA.Text = outputRSA.Text;
+            outputRSA.Text = text;
+        }
+
+        private void factorCheckRSA_CheckedChanged(object sender, EventArgs e)
+        {
+            modulusRSA.ReadOnly = factorCheckRSA.Checked;
+            privateKeyRSA.ReadOnly = factorCheckRSA.Checked;
+            primePanelRSA.Visible = factorCheckRSA.Checked;
+
+            modulusRSA.Text = "";
+            firstPrimeRSA.Text = "";
+            secondPrimeRSA.Text = "";            
+            privateKeyRSA.Text = "";
+        }
+
+        private void randPrimeRSA_Click(object sender, EventArgs e)
+        {
+            rsaInput.randPQ();
+            firstPrimeRSA.Text = rsaInput.getP();
+            secondPrimeRSA.Text = rsaInput.getQ();
+            modulusRSA.Text = rsaInput.getN();
+        }
+         
+        private void randKeyRSA_Click(object sender, EventArgs e)
+        {
+            rsaInput.randE();
+            publicKeyRSA.Text = rsaInput.getE();
+            privateKeyRSA.Text = rsaInput.getD();
+        }
 
         #endregion
 
