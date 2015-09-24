@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.ListViewItem listViewItem13 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "1",
             "a",
             "b",
@@ -37,7 +37,7 @@
             "d",
             "e",
             ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem14 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
             "2",
             "f",
             "g",
@@ -45,10 +45,10 @@
             "i",
             "k",
             ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem15 = new System.Windows.Forms.ListViewItem("3");
-            System.Windows.Forms.ListViewItem listViewItem16 = new System.Windows.Forms.ListViewItem("4");
-            System.Windows.Forms.ListViewItem listViewItem17 = new System.Windows.Forms.ListViewItem("5");
-            System.Windows.Forms.ListViewItem listViewItem18 = new System.Windows.Forms.ListViewItem("6");
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("3");
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("4");
+            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("5");
+            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem("6");
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.plainCaesar = new System.Windows.Forms.TextBox();
@@ -264,12 +264,13 @@
             // 
             // tableLayoutPanel2
             // 
+            this.tableLayoutPanel2.BackColor = System.Drawing.SystemColors.Control;
             this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel2.ColumnCount = 4;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.26617F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 83.73383F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 104F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 133F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 135F));
             this.tableLayoutPanel2.Controls.Add(this.polyalphaDecryptRadio, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.polyalphaKeyword, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
@@ -284,17 +285,13 @@
             // 
             // polyalphaDecryptRadio
             // 
-            this.polyalphaDecryptRadio.Appearance = System.Windows.Forms.Appearance.Button;
-            this.polyalphaDecryptRadio.AutoSize = true;
             this.polyalphaDecryptRadio.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.polyalphaDecryptRadio.Location = new System.Drawing.Point(635, 3);
-            this.polyalphaDecryptRadio.Margin = new System.Windows.Forms.Padding(0, 2, 3, 2);
+            this.polyalphaDecryptRadio.Location = new System.Drawing.Point(636, 4);
             this.polyalphaDecryptRadio.Name = "polyalphaDecryptRadio";
-            this.polyalphaDecryptRadio.Size = new System.Drawing.Size(131, 26);
+            this.polyalphaDecryptRadio.Size = new System.Drawing.Size(130, 24);
             this.polyalphaDecryptRadio.TabIndex = 4;
             this.polyalphaDecryptRadio.TabStop = true;
             this.polyalphaDecryptRadio.Text = "Decrypt";
-            this.polyalphaDecryptRadio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.polyalphaDecryptRadio.UseVisualStyleBackColor = true;
             this.polyalphaDecryptRadio.CheckedChanged += new System.EventHandler(this.polyRadio_CheckedChanged);
             // 
@@ -305,7 +302,7 @@
             this.polyalphaKeyword.Location = new System.Drawing.Point(90, 4);
             this.polyalphaKeyword.Name = "polyalphaKeyword";
             this.polyalphaKeyword.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.polyalphaKeyword.Size = new System.Drawing.Size(436, 25);
+            this.polyalphaKeyword.Size = new System.Drawing.Size(434, 25);
             this.polyalphaKeyword.TabIndex = 1;
             this.polyalphaKeyword.TextChanged += new System.EventHandler(this.polyKeyword_TextChanged);
             // 
@@ -321,18 +318,15 @@
             // 
             // polyalphaEncryptRadio
             // 
-            this.polyalphaEncryptRadio.Appearance = System.Windows.Forms.Appearance.Button;
-            this.polyalphaEncryptRadio.AutoSize = true;
             this.polyalphaEncryptRadio.Checked = true;
             this.polyalphaEncryptRadio.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.polyalphaEncryptRadio.Location = new System.Drawing.Point(533, 3);
-            this.polyalphaEncryptRadio.Margin = new System.Windows.Forms.Padding(3, 2, 0, 2);
+            this.polyalphaEncryptRadio.Location = new System.Drawing.Point(531, 4);
             this.polyalphaEncryptRadio.Name = "polyalphaEncryptRadio";
-            this.polyalphaEncryptRadio.Size = new System.Drawing.Size(101, 26);
+            this.polyalphaEncryptRadio.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.polyalphaEncryptRadio.Size = new System.Drawing.Size(98, 24);
             this.polyalphaEncryptRadio.TabIndex = 3;
             this.polyalphaEncryptRadio.TabStop = true;
             this.polyalphaEncryptRadio.Text = "Encrypt";
-            this.polyalphaEncryptRadio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.polyalphaEncryptRadio.UseVisualStyleBackColor = true;
             this.polyalphaEncryptRadio.CheckedChanged += new System.EventHandler(this.polyRadio_CheckedChanged);
             // 
@@ -396,6 +390,7 @@
             // 
             // tableLayoutPanel3
             // 
+            this.tableLayoutPanel3.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel3.ColumnCount = 1;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Controls.Add(this.sixPolyCheck, 0, 3);
@@ -421,7 +416,7 @@
             // 
             this.sixPolyCheck.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.sixPolyCheck.AutoSize = true;
-            this.sixPolyCheck.Location = new System.Drawing.Point(46, 95);
+            this.sixPolyCheck.Location = new System.Drawing.Point(46, 99);
             this.sixPolyCheck.Name = "sixPolyCheck";
             this.sixPolyCheck.Size = new System.Drawing.Size(88, 19);
             this.sixPolyCheck.TabIndex = 4;
@@ -435,7 +430,7 @@
             this.fivePolyCheck.AutoSize = true;
             this.fivePolyCheck.Checked = true;
             this.fivePolyCheck.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.fivePolyCheck.Location = new System.Drawing.Point(46, 65);
+            this.fivePolyCheck.Location = new System.Drawing.Point(46, 68);
             this.fivePolyCheck.Name = "fivePolyCheck";
             this.fivePolyCheck.Size = new System.Drawing.Size(88, 19);
             this.fivePolyCheck.TabIndex = 1;
@@ -447,9 +442,9 @@
             // 
             this.listContainer.Controls.Add(this.polybiusSquare);
             this.listContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listContainer.Location = new System.Drawing.Point(3, 123);
+            this.listContainer.Location = new System.Drawing.Point(4, 128);
             this.listContainer.Name = "listContainer";
-            this.listContainer.Size = new System.Drawing.Size(174, 211);
+            this.listContainer.Size = new System.Drawing.Size(172, 204);
             this.listContainer.TabIndex = 1;
             // 
             // polybiusSquare
@@ -466,24 +461,24 @@
             this.polybiusSquare.FullRowSelect = true;
             this.polybiusSquare.GridLines = true;
             this.polybiusSquare.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            listViewItem13.UseItemStyleForSubItems = false;
-            listViewItem14.UseItemStyleForSubItems = false;
-            listViewItem15.UseItemStyleForSubItems = false;
-            listViewItem16.UseItemStyleForSubItems = false;
-            listViewItem17.UseItemStyleForSubItems = false;
-            listViewItem18.UseItemStyleForSubItems = false;
+            listViewItem1.UseItemStyleForSubItems = false;
+            listViewItem2.UseItemStyleForSubItems = false;
+            listViewItem3.UseItemStyleForSubItems = false;
+            listViewItem4.UseItemStyleForSubItems = false;
+            listViewItem5.UseItemStyleForSubItems = false;
+            listViewItem6.UseItemStyleForSubItems = false;
             this.polybiusSquare.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem13,
-            listViewItem14,
-            listViewItem15,
-            listViewItem16,
-            listViewItem17,
-            listViewItem18});
+            listViewItem1,
+            listViewItem2,
+            listViewItem3,
+            listViewItem4,
+            listViewItem5,
+            listViewItem6});
             this.polybiusSquare.Location = new System.Drawing.Point(0, 0);
             this.polybiusSquare.MultiSelect = false;
             this.polybiusSquare.Name = "polybiusSquare";
             this.polybiusSquare.Scrollable = false;
-            this.polybiusSquare.Size = new System.Drawing.Size(174, 211);
+            this.polybiusSquare.Size = new System.Drawing.Size(172, 204);
             this.polybiusSquare.TabIndex = 4;
             this.polybiusSquare.UseCompatibleStateImageBehavior = false;
             this.polybiusSquare.View = System.Windows.Forms.View.Details;
@@ -532,42 +527,38 @@
             // 
             // polybiusDecryptRadio
             // 
-            this.polybiusDecryptRadio.Appearance = System.Windows.Forms.Appearance.Button;
             this.polybiusDecryptRadio.AutoSize = true;
             this.polybiusDecryptRadio.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.polybiusDecryptRadio.Location = new System.Drawing.Point(3, 30);
-            this.polybiusDecryptRadio.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.polybiusDecryptRadio.Location = new System.Drawing.Point(11, 35);
+            this.polybiusDecryptRadio.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.polybiusDecryptRadio.Name = "polybiusDecryptRadio";
-            this.polybiusDecryptRadio.Size = new System.Drawing.Size(174, 27);
+            this.polybiusDecryptRadio.Size = new System.Drawing.Size(165, 24);
             this.polybiusDecryptRadio.TabIndex = 3;
             this.polybiusDecryptRadio.Text = "Decrypt";
-            this.polybiusDecryptRadio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.polybiusDecryptRadio.UseVisualStyleBackColor = true;
             this.polybiusDecryptRadio.CheckedChanged += new System.EventHandler(this.polybiusRadio_CheckedChanged);
             // 
             // polybiusEncryptRadio
             // 
-            this.polybiusEncryptRadio.Appearance = System.Windows.Forms.Appearance.Button;
             this.polybiusEncryptRadio.AutoSize = true;
             this.polybiusEncryptRadio.Checked = true;
             this.polybiusEncryptRadio.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.polybiusEncryptRadio.Location = new System.Drawing.Point(3, 3);
-            this.polybiusEncryptRadio.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
+            this.polybiusEncryptRadio.Location = new System.Drawing.Point(11, 4);
+            this.polybiusEncryptRadio.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.polybiusEncryptRadio.Name = "polybiusEncryptRadio";
-            this.polybiusEncryptRadio.Size = new System.Drawing.Size(174, 27);
+            this.polybiusEncryptRadio.Size = new System.Drawing.Size(165, 24);
             this.polybiusEncryptRadio.TabIndex = 2;
             this.polybiusEncryptRadio.TabStop = true;
             this.polybiusEncryptRadio.Text = "Encrypt";
-            this.polybiusEncryptRadio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.polybiusEncryptRadio.UseVisualStyleBackColor = true;
             this.polybiusEncryptRadio.CheckedChanged += new System.EventHandler(this.polybiusRadio_CheckedChanged);
             // 
             // transposeButton
             // 
             this.transposeButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.transposeButton.Location = new System.Drawing.Point(3, 340);
+            this.transposeButton.Location = new System.Drawing.Point(4, 339);
             this.transposeButton.Name = "transposeButton";
-            this.transposeButton.Size = new System.Drawing.Size(174, 28);
+            this.transposeButton.Size = new System.Drawing.Size(172, 28);
             this.transposeButton.TabIndex = 5;
             this.transposeButton.Text = "Transpose";
             this.transposeButton.UseVisualStyleBackColor = true;
