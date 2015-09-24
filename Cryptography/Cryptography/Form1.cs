@@ -74,13 +74,7 @@ namespace Cryptography
         #endregion
 
         #region Polyalphabetic Cipher
-
-        private void polyRadio_CheckedChanged(object sender, EventArgs e)
-        {
-            plainPolyaplha.ReadOnly = polyalphaDecryptRadio.Checked;
-            cipherPolyalpha.ReadOnly = polyalphaEncryptRadio.Checked;
-        }
-
+        
         private void encryptPolyalpha()
         {
             cipherPolyalpha.Clear();
@@ -147,6 +141,12 @@ namespace Cryptography
                 }
             }
             plainPolyaplha.Text = plain;
+        }
+
+        private void polyRadio_CheckedChanged(object sender, EventArgs e)
+        {
+            plainPolyaplha.ReadOnly = polyalphaDecryptRadio.Checked;
+            cipherPolyalpha.ReadOnly = polyalphaEncryptRadio.Checked;
         }
 
         private void plainPoly_TextChanged(object sender, EventArgs e)
@@ -433,6 +433,13 @@ namespace Cryptography
 
         #endregion
 
+        #region RSA Encryption
+
+        #endregion
+
+        #region Mysterious Encryption
+                        
+        #endregion
 
     }
 }
